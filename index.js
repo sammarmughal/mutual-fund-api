@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 // Example: Fetch PSX market data
 app.get("/api/funds", async (req, res) => {
   try {
-    const response = await axios.get("https://psxterminal.com/api/market-data?market=REG");
+    const response = await axios.get("/db.json");
     res.json(response.data);
   } catch (error) {
     console.error(error.message);
